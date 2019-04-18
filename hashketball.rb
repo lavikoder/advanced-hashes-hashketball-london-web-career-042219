@@ -229,7 +229,7 @@ def winning_team
   a_points = 0
   b_points = 0
     game_hash.each do |team, team_data|
-      team_data.each do |player, data|
+      team_data[:player].each do |player, data|
         if team == :home
           a_points += data[:points]
         else
