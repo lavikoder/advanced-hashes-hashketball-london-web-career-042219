@@ -226,14 +226,23 @@ end
 
 
 def winning_team
-  b_points = 0
   a_points = 0
+  b_points = 0
     game_hash.each do |team, team_data|
-      if team == "Brooklyn Jets"
-        b_points == team[]
       team_data.each do |player, data|
-        player[:points]
-        
+        if team == :home
+          a_points += data[:points]
+        else
+          b_points += data[:points]
+        end
       end
     end
+    if a_points > b_points
+      game_hash["home"][:team_name]
+    else
+      game_hash["away"][:team_name]
+    end
+end
+      
+
         
