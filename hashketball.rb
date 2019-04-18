@@ -226,4 +226,6 @@ end
 
 
 def winning_team
-  
+  b_points = 0
+  a_points = 0
+    
