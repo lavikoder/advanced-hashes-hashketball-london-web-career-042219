@@ -199,15 +199,18 @@ end
 
 
 def big_shoe_rebounds
+select_player = nil
 biggest_shoe = 0 
-player_rebounds = 0                                           #assign variable to biggest_shoe and player_rebounds
-  game_hash.each do |team_data|                               #interate through team_data (we don't need key) 
-    team_data[:players].each do |player|                      #
-      if player[:shoe] > 18                                   #express you if statment for largest shoe_size 
-        return player
+player_rebounds = 0                                           
+  game_hash.each do |team_data|                               
+    team_data[:players].each do |player, data|                
+      if data[:shoe] > biggest_shoe                           
+        biggest_shoe = data[:shoe]
+        select_player = data
       end
     end
   end
+  select_player[:rebounds]
 end
         binding.pry
         
