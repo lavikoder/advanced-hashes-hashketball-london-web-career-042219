@@ -1,5 +1,3 @@
-require 'pry'
-
 def game_hash
   {
     home: {
@@ -211,6 +209,3 @@ biggest_shoe = 0
   end
   select_player[:rebounds]
 end
-        binding.pry
-        
-"Hello"
