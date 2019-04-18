@@ -210,4 +210,9 @@ select_player = nil                                           #best to set varia
   select_player[:rebounds]                                    #now select_player has been updated we can call for the
 end                                                           #data (rebounds in this case) using our variable
 
-def 
+def most_points_scored
+  high_score = 0 
+  select_player = nil
+    game_hash.each do |team, team_data|
+      team_data[:players].each do |player, data|
+        
