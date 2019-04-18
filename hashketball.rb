@@ -199,9 +199,9 @@ end
 def big_shoe_rebounds
 biggest_shoe = 0                                              #Q. first asks for biggest_shoe then player[:rebounds]
 select_player = nil                                           #best to set variables for relevant of data
-  game_hash.each do |team, team_data|                         #iterate through tema and team_data
+  game_hash.each do |team, team_data|                         #iterate through team and team_data
     team_data[:players].each do |player, data|                #then iterate through player and their data
-      if data[:shoe] > biggest_shoe                           #compare information during iteration process
+      if data[:shoe] > biggest_shoe                           #compare relevant information during iteration process
         biggest_shoe = data[:shoe]                            #now store information to variable set
         select_player = data                                  #ruby will update information through process 
       end
@@ -211,13 +211,13 @@ select_player = nil                                           #best to set varia
 end                                                           #data (rebounds in this case) using our variable
 
 def most_points_scored                                        
-  high_score = 0                                              #
-  select_player = nil
-  game_hash.each do |team, team_data|
-    team_data[:players].each do |player, data|
-      if data[:points] > high_score
-        high_score = data[:points]
-        select_player = player
+  high_score = 0                                              #Q. first asks for person then HIGHEST player[:points]
+  select_player = nil                                         #best to set variables for relevant of data
+  game_hash.each do |team, team_data|                         #iterate through team and team_data
+    team_data[:players].each do |player, data|                #then iterate through player and their data
+      if data[:points] > high_score                           #compare relevant information during iteration process
+        high_score = data[:points]                            #now store information to variable set
+        select_player = player                                #ruby will update information through process 
       end
     end
   end
