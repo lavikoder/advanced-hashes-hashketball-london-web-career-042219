@@ -213,13 +213,13 @@ end                                                           #data (rebounds in
 def most_points_scored
   high_score = 0 
   select_player = nil
-    game_hash.each do |team, team_data|
-      team_data[:players].each do |player, data|
-        if data[:points] > high_score
-          high_score = data[:points]
-          select_player = player
-        end
+  game_hash.each do |team, team_data|
+     team_data[:players].each do |player, data|
+      if data[:points] > high_score
+        high_score = data[:points]
+        select_player = player
       end
     end
-    select_player
+  end
+  select_player
 end
