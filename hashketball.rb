@@ -209,3 +209,5 @@ select_player = nil                                           #best to set varia
   end
   select_player[:rebounds]                                    #now select_player has been updated we can call for the
 end                                                           #data (rebounds in this case) using our variable
+
+def 
