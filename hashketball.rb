@@ -204,7 +204,8 @@ player_rebounds = 0                                           #assign variable t
   game_hash.each do |team_data|                               #interate through team_data (we don't need key) 
     team_data[:players].each do |player|                      #
       if player[:shoe] > 18                                   #express you if statment for largest shoe_size 
-      return player_r
+        return player
+      end
     end
   end
 end
