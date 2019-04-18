@@ -267,7 +267,7 @@ def long_name_steals_a_ton?
       if player.to_s.length > longest_name
         player_name = player
       end
-        if player[:steals] > player_steals
+        if data[:steals] > player_steals
           player_steals_name = player
         end
         if player_steals_name = player_name
