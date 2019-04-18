@@ -197,7 +197,17 @@ end
 
 
 def big_shoe_rebounds
-                                 #now select_player has been updated we can call for the
+biggest_shoe = 0                                              #Q. first asks for biggest_shoe then player[:rebounds]
+select_player = nil                                           #best to set variables for relevant of data
+  game_hash.each do |team, team_data|                         #iterate through tema and team_data
+    team_data[:players].each do |player, data|                #then iterate through player and their data
+      if data[:shoe] > biggest_shoe                           #compare information during iteration process
+        biggest_shoe = data[:shoe]                            #now store information to variable set
+        select_player = data                                  #ruby will update information through process 
+      end
+    end
+  end
+  select_player[:rebounds]                                    #now select_player has been updated we can call for the
 end                                                           #data (rebounds in this case) using our variable
 
 def most_points_scored
