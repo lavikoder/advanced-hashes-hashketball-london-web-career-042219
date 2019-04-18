@@ -221,7 +221,7 @@ def most_points_scored
       end
     end
   end
-  select_player
+  select_player                                               #call for variable containing player with the m_points
 end
 
 
