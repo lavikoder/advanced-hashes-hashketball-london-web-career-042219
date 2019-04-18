@@ -197,8 +197,8 @@ end
 
 
 def big_shoe_rebounds
-select_player = nil                             
-biggest_shoe = 0 
+biggest_shoe = 0                                              #Q. first asks for biggest_shoe then player[:rebounds]
+select_player = nil                                           #best to set variables for relevant of data
   game_hash.each do |team, team_data|                               
     team_data[:players].each do |player, data|                
       if data[:shoe] > biggest_shoe                           
